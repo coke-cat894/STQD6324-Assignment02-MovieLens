@@ -8,6 +8,22 @@ The overall workflow of this project is shown below:
 <img src="flow_picture.png" width="900">
 
 
+## Reproducibility Notes
+
+This project was developed and tested in a Hadoop/Spark virtual machine environment. The scripts are designed to run inside the virtual machine where HDFS, Spark, Cassandra, and MongoDB are available locally.
+
+Some paths and database connection settings are environment-specific:
+
+- HDFS raw data path: `/user/maria_dev/assignment02/movielens/raw/`
+- Local MovieLens source path used in the README examples: `/home/maria_dev/ml-100k/`
+- Cassandra host: `127.0.0.1`
+- Cassandra keyspace: `movielens_ks`
+- MongoDB host: `localhost:27017`
+- MongoDB database: `movielens_db`
+
+If the project is reproduced in another virtual machine, please make sure that the dataset is uploaded to the same HDFS path, or update the file paths in the scripts accordingly.
+
+
 ## Environment and Package Versions
 
 The main pipeline was executed in the Hadoop/Spark virtual machine environment.
